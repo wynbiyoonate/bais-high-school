@@ -1,64 +1,124 @@
-/* General page styling */
+/* templatemo_style.css - Styles for Yobskii site */
+/* A clean, responsive stylesheet matching the provided XHTML structure */
+
+/* Basic reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.45;
+  color: #222;
+  background: linear-gradient(180deg, #f6f9fc 0%, #e9f0f7 100%);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Site wrapper (center content) */
+#templatemo_header_wrapper,
+#templatemo_banner_wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* center the panel */
+}
+
+#templatemo_header_panel,
+#templatemo_banner_panel {
+  width: 100%;
+  max-width: 1100px; /* maintain readable line length */
+  padding: 18px;
+}
+
+/* Header area */
+#templatemo_header_panel {
+  padding-top: 28px;
+  padding-bottom: 8px;
+}
+
+#templatemo_header {
+  background: linear-gradient(90deg, rgba(12,85,153,0.98), rgba(24,120,199,0.95));
+  color: #fff;
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: 1px;
+  padding: 22px 26px;
+  border-radius: 14px;
+  box-shadow: 0 8px 18px rgba(12,40,80,0.12), inset 0 -2px 0 rgba(255,255,255,0.04);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Optional smaller subtitle inside header (if you add it later) */
+#templatemo_header small {
+  display: block;
+  font-weight: 400;
+  font-size: 12px;
+  opacity: 0.9;
+  margin-top: 6px;
+  text-transform: none;
+}
+
+/* Banner area - use this for hero image / announcement */
+#templatemo_banner_panel {
+  margin-top: 18px;
   padding: 0;
-  line-height: 1.6;
-  background-color: #f9f9f9;
 }
 
-/* Header styling */
-header {
-  background-color: #004aad;
+#templatemo_banner_panel {
+  height: 240px; /* default hero height */
+  border-radius: 12px;
+  overflow: hidden;
+  background-image: linear-gradient(180deg, rgba(8,31,63,0.06), rgba(255,255,255,0.02));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(16,40,80,0.06);
+}
+
+/* Example inner banner content style */
+#templatemo_banner_panel .hero{
+  width: 100%;
+  max-width: 1100px;
+  padding: 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+#templatemo_banner_panel .hero h1{
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+#templatemo_banner_panel .hero p{
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+/* Responsive typography */
+@media (max-width: 720px) {
+  #templatemo_header { font-size: 22px; padding: 16px; }
+  #templatemo_banner_panel { height: 180px; }
+  #templatemo_banner_panel .hero h1 { font-size: 20px; }
+}
+
+/* Utility classes (handy to have) */
+.container { max-width: 1100px; margin: 0 auto; padding: 12px; }
+.center { text-align: center; }
+.cta {
+  display: inline-block;
+  background: #ff7a59;
   color: #fff;
-  padding: 20px 10px;
-  text-align: center;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 6px 14px rgba(255,122,89,0.18);
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2em;
-}
+/* Small footer reset in case you add one later */
+footer { margin-top: 28px; text-align: center; font-size: 13px; color: #6b7280; }
 
-header p {
-  margin: 5px 0 0;
-}
+/* Accessibility tweaks */
+a:focus, button:focus { outline: 3px solid rgba(99,102,241,0.18); outline-offset: 2px; }
 
-/* Main content */
-main {
-  padding: 20px;
-}
-
-/* Section headings */
-section h2 {
-  color: #004aad;
-}
-
-/* Paragraphs */
-section p {
-  margin-bottom: 10px;
-}
-
-/* Button styling */
-button {
-  padding: 10px 15px;
-  background-color: #004aad;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1em;
-}
-
-button:hover {
-  background-color: #0066ff;
-}
-
-/* Footer */
-footer {
-  background-color: #004aad;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-  position: relative;
-}
+/* End of stylesheet */
